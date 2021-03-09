@@ -1,5 +1,5 @@
 defmodule ListFilter do
-  def call(list), do: filter(list)
+  def call(list), do: count(list)
 
   defp parseInt(list) do
     Enum.flat_map(list, fn elem ->
@@ -10,8 +10,8 @@ defmodule ListFilter do
     end)
   end
 
-  defp filter(list) do
+  defp count(list) do
     list = parseInt(list)
-    Enum.filter(list, fn elem -> rem(elem, 2) == 1 end)
+    Enum.count(list, fn elem -> rem(elem, 2) == 1 end)
   end
 end

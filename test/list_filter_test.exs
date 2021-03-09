@@ -7,7 +7,7 @@ defmodule ListFilterTest do
 
       response = ListFilter.call(list)
 
-      expected_response = [1, 7]
+      expected_response = 2
 
       assert response == expected_response
     end
